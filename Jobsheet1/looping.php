@@ -20,27 +20,33 @@
     echo "Perulangan dengan do while </br>";
     $x=1;
     
-    function isprime($number){
-            if($number<=1){
+    function prima($y) {
+        if ($y <= 1) {
+            return false;
+        }else if($y=2){
+                return true;
+            }
+    
+        $i = 2;
+        do {
+            
+            if ($y % $i == 0) {
                 return false;
             }
-        
-        do{
-            $i=2;
-                if($number % $i == 0){
-                return false;
-            }
-            return true;
             $i++;
-        }while (($i*$i)<=$number);
+        } while (($i * $i) <= $y);
+    
+        return true;
     }
+    
+    
     do {
         
-         if(isprime($x)){
+         if(prima($x)){
             echo " $x <br>";
          }   
         $x++;
-      } while ($x <= 20);
+      } while ($x <= 100);
 
     ?>
 </body>
